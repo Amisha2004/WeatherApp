@@ -12,11 +12,11 @@ const weather_body = document.querySelector('.weather-body');
 
 
 async function checkWeather(city){
-    const api_key = "4cd0eee81294c867b4bc4cfc64e998c5";
+    const api_key = "1ded6a11a7a2147fbf2d6c7973291a57";
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api_key}`;
-
     const weather_data = await fetch(`${url}`).then(response => response.json());
-
+    // This code is used to fetch url and  the callback function uses the json()
+    // method of the response object to parse the response body as JSON
 
     if(weather_data.cod === `404`){
         location_not_found.style.display = "flex";
